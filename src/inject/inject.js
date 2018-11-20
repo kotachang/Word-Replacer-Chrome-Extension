@@ -45,9 +45,20 @@
  *                  replaced by butt
  */
 function modifyText(text, settings) {
-	// Currently, this method returns the unmodified text.
-	// You'll need to update this method to return the updated text.
-	return text;
+	var str = text;
+	var map = settings;
+	var iterator = map.keys();
+	var key = "";
+	// cal and Cal to butt and Butt by default
+	var newText = str.replace('cal','butt');
+	newText = str.replace('Cal', 'Butt');
+
+	for (i=0 ; i < map.size ; i++){
+		key = iterator.next().value;
+		newText = newText.replace(key, map.get(key));
+	}
+
+	return newText;
 }
 
 /**
@@ -75,9 +86,17 @@ function modifyText(text, settings) {
  *        An object that represents all the replacement rules
  */
 function parseSettings(lines) {
-	// Currently, this method returns nothing. You'll have to
-	// update this method to return the replacement rules.
-	return null;
+	var ruleMap = new Map();
+	var key = "";
+	var arrowPos = 0;
+	for(i=0 ; i < lines.length ; i++){
+		key = lines[i];
+		key.trim();
+		arrowPos = key.indexOf("->");
+		ruleMap.set(key.slice(0,arrowPos).trim(), key.slice(arrowPos+2,key.length).trim())
+	}
+
+	return ruleMap;
 }
 
 /**
@@ -108,9 +127,10 @@ function parseSettings(lines) {
  	// Currently, this method does nothing. Update it so that
  	// it (1) finds all the images on the page, (2) uses the
  	// settings to determine an appropriate replacement image
- 	// (we recommend Beyonce: http://i.imgur.com/umfG8Lj.jpg),
+ 	// (we recommend Beyonce: http://i.imgur.co m/umfG8Lj.jpg),
  	// and (3) replace the src of the image with the replacement
  	// image.
+ 	var images = document.querySelectorAll("img");
  	return;
  }
 

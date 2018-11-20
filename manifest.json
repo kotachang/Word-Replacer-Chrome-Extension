@@ -12,11 +12,11 @@
 {
   // Required
   "manifest_version": 2,
-  "name": "Cal to Butt",
-  "version": "0.0.1",
+  "name": "Word Replacer Practice",
+  "version": "0.0.2",
 
   // Recommended
-  "description": "Chrome Extension Hackpack @ TreeHacks 2016",
+  "description": "Chrome Extension Hackpack @ TreeHacks 2016 Modification",
   "icons": {
     "16": "icons/TreeHacks-white-16.png",
     "32": "icons/TreeHacks-white-32.png",
@@ -55,7 +55,7 @@
   },
   "browser_action": {
     "default_icon": "icons/TreeHacks-white-19.png",
-    "default_title": "Cal to Butt",
+    "default_title": "Word Replacer",
     "default_popup": "src/browser_action/browser_action.html"
   },
   "content_scripts": [
