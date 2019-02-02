@@ -1,4 +1,4 @@
-# Cal to Butt: Chrome Extension Hackpack @ TreeHacks 2016
+# Chrome Extension Hackpack @ TreeHacks 2016
 
 *Come join us on [#hackpack-chrome-ext](https://treehacks-2016.slack.com/messages/hackpack-chrome-ext) on Slack to get help, hang out, and show off your project!*
 
@@ -8,7 +8,7 @@ Congratulations! You've chosen this hackpack, and you're well on your way to bui
 
 In this hackpack, you will build a chrome extension that replaces the content on webpages according to customizable rules. At a glance, your tasks will include:
 
-1. Replace all instances of the text "cal" with the text "butt" on all webpages.
+1. Replace all instances of the text "cal" on all webpages.
 2. Replace all text on a webpage according to user-specified replacement rules.
 3. Replace all images on a website according to user-specified replacement rules.
 
